@@ -178,6 +178,8 @@ NSString* const DEFAULT_SOUND = @"res://platform_default";
     }
     else if ([interval isEqualToString:@"year"]) {
         return NSCalendarUnitYear;
+    } else {
+        return (int)interval * NSCalendarUnitMinute;
     }
 
     return NSCalendarUnitEra;
